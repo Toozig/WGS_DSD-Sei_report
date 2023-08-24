@@ -1,14 +1,6 @@
 ```python
-import pandas as pd
-import numpy as np
-from bin.viz_function import *
-from bin.opy_targets import get_variants_info
-
-
 CLASS_IDX_START = 10
 DIFF_THRESHOLD = 3
-
-
 ```
 
 # Sei Framework: Decoding Genetic Regulation
@@ -99,8 +91,6 @@ The Sei mutation analysis script outputs the difference between predictions. <br
 We proceed with the hypothesis that a variant resulting in a substantial alteration in classification signifies a noteworthy impact.
 
 
-
-
 *Please note that the provided information covers the primary insights from the analysis. If any additional details are required, feel free to ask.*
 
 
@@ -108,10 +98,6 @@ We proceed with the hypothesis that a variant resulting in a substantial alterat
 The following are the first rows of the output
 
 
-```python
-class_score = pd.read_csv('data/sorted.tmp.sequence_class_scores.tsv', sep='\t')
-display(class_score.head())
-```
 
 
 <div>
@@ -363,9 +349,6 @@ class_score[['ref_match','contains_unk']].describe().T
 The table indicates that all variants align perfectly with the hg38 reference genome, evidenced by the term "Reference Matches." Importantly, neighboring positions of these variants do not contain any unknown characters, underscoring the alignment's accuracy and integrity.
 
 
-```python
-described_variant_hist(class_score.name)
-```
 
 
         <script type="text/javascript">
