@@ -6,8 +6,9 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 
 
+CLASS_IDX_START = 10
 
-def plot_distribution_with_sd(data_dict, title):
+def plot_distribution_with_sd(data_dict, title, x_label):
     """
     Create a distribution plot with signs for mean and standard deviation using Seaborn.
     The plot is cut at the 98th percentile and the area above 95th percentile is colored.
@@ -37,7 +38,7 @@ def plot_distribution_with_sd(data_dict, title):
         plt.axvline(mean_value - std_value, color=colors[idx], linestyle='dashed', linewidth=1)
     
     plt.xlim(0, percentile_98)  # Set x-axis limit up to the 98th percentile
-    plt.xlabel('Values')
+    plt.xlabel(x_label)
     plt.ylabel('Frequency')
     plt.title(title)
     plt.legend()
